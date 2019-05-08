@@ -1,8 +1,5 @@
----
-title: Introducción al Lenguaje R
-permalink: /CursoR/
-published: true
----
+# Introducción al Lenguaje R
+
 ![header_R](/images/cactus.png)
 
 #### 13 al 17 de mayo de 2019. Aula del Doctorado en Ciencias Biológicas (UNC), Av. Vélez Sársfield esq. Duarte Quiros, ciudad de Córdoba. 
