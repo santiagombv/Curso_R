@@ -1,4 +1,8 @@
-# Introducción al Lenguaje R
+---
+title: Introducción al Lenguaje R
+permalink: /CursoR/
+published: true
+---
 
 ![header_R](/images/cactus.png)
 
