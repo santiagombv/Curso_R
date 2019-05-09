@@ -14,7 +14,7 @@ R es un lenguaje orientado a objetos: cada comando crea un objeto que debe ser "
 
 ##Cuatro símbolos básicos: # <- ? c
 
-```{r, eval=FALSE}
+```R
 # El símbolo # desactiva el espacio a su derecha.
 # Es útil para poner aclaraciones en nuestras rutinas.
 
@@ -50,7 +50,7 @@ vector <- c("1", "a", "2", "b")
 ##Funciones básicas: creación de vectores, secuencias y matrices
 Las funciones de esta sección son las más sencillas de R. Como regla general las funciones siempre deben escribirse acompañadas de paréntesis, que contienen los elementos sobre los cuales la función actuará. Si no se colocan los paréntesis el programa mostrará el código mismo de la función.
 
-```{r, eval=FALSE}
+```R
 ### vectores ###
 # Ya vimos c concatenar
 vec <- c(1, 4, 6, 3, 7)
@@ -107,9 +107,9 @@ Se recomienda:
 
 Una vez lista la planilla se recomienda guardarla en formato .txt o .csv (si bien R admite otros formatos). Pueden guardarse en cualquier carpeta del equipo. En el caso de que se escriba cada vez la ruta para encontrar ese archivo, es recomendable ubicar la carpeta cerca de la raíz del equipo (normalmente C:/ en Windows o /home en Ubuntu). En este manual se supondrá que los archivos de datos se han guardado en C:/RD. Puede evitarse escribir la ruta si al abrir R seleccionamos la carpeta que donde los archivos están guardados con la opción Archivo - cambiar dir o usando la función *setwd* (para examinar cual es la carpeta en uso, utilizar *getwd*). Esta opción es muy útil si vamos a abrir varios archivos de datos guardados en el mismo directorio. Finalmente, puede abrirse una ventana de búsqueda para seleccionar el archivo con la opción *file.choose()*.
    
-\pagebreak
 
-```{r, eval=FALSE}
+
+```R
 # la función read.table
 # opción 1 con ruta completa (notar orientación de las barras /)
 # en este caso asumimos que se encuentra en el directorio RD
@@ -147,7 +147,7 @@ names(datos)    #Nombre de las columnas
 Estas operaciones se realizan para extraer de un objeto la parte que nos interesa, por ejemplo una columna con una variable de un marco de datos.   
 **No usar attach(),** esta función aumenta las probabilidades de confundirse e introducir errores.
 
-```{r, eval=FALSE}
+```R
 # Para seleccionar una columna del marco de datos utilizamos $
 datos$grupo
 
@@ -193,7 +193,7 @@ plot(largo.b ~ largo.a, data = datos)   #modo fórmula: plot(y~x, data)
 ```
 
 ##Modificación y creación de columnas.
-```{r, eval=FALSE}
+```R
 # reemplazo (al usar el mismo nombre) una variable numérica por un factor
 datos$trat
 datos$trat <- as.factor(datos$trat) 
@@ -215,10 +215,8 @@ datos$pais <- factor(datos$pob, levels = c("pob2", "pob1"),
 head(datos)
 ```
 
-\pagebreak
-
 ##Subdivisión de conjuntos de datos
-```{r, eval=FALSE}
+```R
 # Subdivisión de un conjunto de datos
 # Símbolos lógicos: 
 # == (igual)
@@ -241,7 +239,7 @@ ldat[["B"]] # indexacion especial
 ```
 
 ##Funciones para extraer información de una columna o de un vector
-```{r, eval=FALSE}
+```R
 class(xx)
 length(seq1)
 dim(matriz1)
@@ -251,10 +249,9 @@ min(datos$largo.a)
 which.min(datos$largo.a)
 ```
 
-
 ##Funciones estadísticas básicas
 Se detallan abajo algunas como la media, varianza, desvío estándar, etc. En general si cualquiera de ellas se aplica sobre datos que contienen NA el resultado será NA también, por lo cual hay indicarle a la función que los elimine. Una alternativa es eliminar previamente todas las filas con datos faltantes usando la función na.omit.
-```{r, eval=FALSE}
+```R
 # media
 M <- mean(datos$largo.a, na.rm = TRUE)
 M
@@ -288,22 +285,21 @@ MG<-aggregate(datos$largo.a, by=list(datos$grupo), FUN=mean, na.rm=TRUE)
 MG
 ```
 
-
 Otras funciones útiles y miscelánea    
 
-* Editar - Limpiar Consola (Ctrl+L): Borra la consola de R, pero no remueve los objetos de la memoria.    
+* Editar - Limpiar Consola (Ctrl+L): Borra la consola de R, pero no remueve los objetos de la memoria.   
 
 * Detener el cálculo actual. STOP o presionar Esc.     
 
 * Misc - Listar Objetos: Muestra los objetos guardados en la memoria.  
 
-```{r, eval=FALSE}
+```R
 ls()
 ```
 
 * Misc - Remover todos los objetos: Elimina todos los objetos guardados en la memoria.    
 
-```{r, eval=FALSE} 
+```R
 rm(list = ls(all = TRUE))
 ```
 
