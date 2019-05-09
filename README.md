@@ -6,6 +6,8 @@ published: true
 
 ![header_R](/images/cactus.png)
 
+### Docentes: Santiago Benitez-Vieyra y Federico Sazatornil
+
 #### 13 al 17 de mayo de 2019. Aula del Doctorado en Ciencias Biológicas (UNC), Av. Vélez Sársfield esq. Duarte Quiros, ciudad de Córdoba. 
 
 ### Links a las clases teóricas.
