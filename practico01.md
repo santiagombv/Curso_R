@@ -6,7 +6,7 @@
 R es un lenguaje orientado a objetos: cada comando crea un objeto que debe ser "nombrado" para que permanezca en la memoria utilizando una ```<-```  y su nombre debe ser "invocado" para que aparezca en pantalla. A pesar de ser un lenguaje de programación, R es comparativamente simple e intuitivo.
 
 ## Objetos comunes en R.
-
+|       |             |
 |:------|:------------|
 | **data.frame** | Objeto que contiene datos. Habitualmente se crea al importar datos 
                       externos, aunque pueden ser creados dentro del mismo R. Consiste en una serie de variables (*vectors*) de igual longitud y que pueden ser del mismo tipo o no. |
