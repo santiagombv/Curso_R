@@ -1,14 +1,11 @@
----
-title: 'Práctico 9: Modelos Randomizados y Modelos Nulos.'
-output: 
-  html_document:
-    highlight: tango
----
+# Práctico 9: Modelos Randomizados y Modelos Nulos.
 
-##Caso 1. Modelos lineales randomizados.
+
+## Caso 1. Modelos lineales randomizados
+
 Se intenta conocer si la cantidad de grasa en la leche de vaca es influida por su raza (Ayrshire, Canadian, Guernsey, Holstein-Fresian o Jersey). Se plantea en primer lugar un modelo lineal general. Ante la violación de los supuestos del modelo se realizará un modelo randomizado construyendo una tabla ad-hoc de pseudo-F.
 
-```{r, eval=FALSE}
+```R
 # complete la ruta al directorio en ...
 vacas <- read.table(".../vacas.txt", header = TRUE)
 
@@ -52,9 +49,11 @@ P.breed
 #no podemos asegurar que sea 0, sino P<0.001
 ```
 
-##Caso 2: Un Monte Carlo sencillo.
+## Caso 2: Un Monte Carlo sencillo
+
 Se intenta probar si la distribución espacial de árboles en un área de 4 km2 se aparta de una distribución aleatoria uniforme.
-```{r, eval=FALSE}
+
+```R
 # complete la ruta al directorio en ...
 esp <- read.table(".../espMC.txt", header = TRUE)
 plot(y ~ x, data=esp)
@@ -88,7 +87,7 @@ P <- length(Ds[Ds < Dobs]) / length(Ds)
 P
 ```
 
-##Ejercicios
+## Ejercicios
 
 1. Los datos del archivo nidos.txt contienen la cantidad de nidos de cierta especie de ave (nidos) presentes en árboles de diferentes diámetros (diametros) en 3 sitios diferentes (sitio).   
    + Realizar el modelo lineal correspondiente para probar la existencia de un efecto del sitio y del diámetro del árbol sobre la cantidad de nidos (añadir interacción).   
@@ -97,7 +96,7 @@ P
 
 2. El test de Mantel es utilizado para evaluar la asociación entre dos matrices de distancia (por ejemplo distancia genética y distancia geográfica) calculando la asociación entre dos matrices y comparando esta medida observada con la esperada por azar. La asociación entre matrices se calcula utilizando la correlación pareada entre los elementos de las matrices. Dado que las matrices X e Y son simétricas se utiliza solamente la mitad de ellas (arriba o abajo de la diagonal), esta mitad puede obtenerse por indexación.  
 
-```{r, eval=FALSE}
+```R
 # la mitad superior de la matriz X es 
 X[col(X) > row(X)]
 ```
