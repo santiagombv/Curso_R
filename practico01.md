@@ -1,7 +1,7 @@
-#Práctico 1. Introducción al Lenguaje R
+# Práctico 1. Introducción al Lenguaje R
 
 
-##Creación de objetos
+## Creación de objetos
 R es un lenguaje orientado a objetos: cada comando crea un objeto que debe ser "nombrado" para que permanezca en la memoria utilizando una ```<-```  y su nombre debe ser "invocado" para que aparezca en pantalla. A pesar de ser un lenguaje de programación, R es comparativamente simple e intuitivo.
 
 ##Objetos comunes en R.
@@ -12,7 +12,7 @@ R es un lenguaje orientado a objetos: cada comando crea un objeto que debe ser "
 **matrix** | Matriz formada por la unión de vectores de un mismo tipo y largo, por un solo vector que es partido en columnas y filas o (más habitualmente) producto de ciertas funciones, por ejemplo *cor*, que construye matrices de correlación. 
 **list** | Objeto que compuesto de objetos de distinto tipo y largo. 
 
-##Cuatro símbolos básicos: # <- ? c
+## Cuatro símbolos básicos: # <- ? c
 
 ```R
 # El símbolo # desactiva el espacio a su derecha.
@@ -47,7 +47,7 @@ vector <- c("1", "a", "2", "b")
 ```
 
 
-##Funciones básicas: creación de vectores, secuencias y matrices
+## Funciones básicas: creación de vectores, secuencias y matrices
 Las funciones de esta sección son las más sencillas de R. Como regla general las funciones siempre deben escribirse acompañadas de paréntesis, que contienen los elementos sobre los cuales la función actuará. Si no se colocan los paréntesis el programa mostrará el código mismo de la función.
 
 ```R
@@ -97,7 +97,7 @@ matriz2 <- matrix(c(1:20), 4, 5)
 matriz2
 ```
 
-##Preparación e ingreso de datos: las funciones *read.table* y *read.csv*.
+## Preparación e ingreso de datos: las funciones *read.table* y *read.csv*.
 Los datos pueden prepararse con cualquier software para planillas de datos como Excel o LibreOffice Calc. 
 Se recomienda:  
 - Que los nombres de las columnas no tengan espacios ni comiencen con números.    
@@ -143,7 +143,7 @@ ncol(datos)     #Número de columnas
 names(datos)    #Nombre de las columnas
 ```
 
-##Indexación
+## Indexación
 Estas operaciones se realizan para extraer de un objeto la parte que nos interesa, por ejemplo una columna con una variable de un marco de datos.   
 **No usar attach(),** esta función aumenta las probabilidades de confundirse e introducir errores.
 
@@ -192,7 +192,7 @@ plot(datos$largo.a, datos$largo.b)      #modo por default: plot(x,y)
 plot(largo.b ~ largo.a, data = datos)   #modo fórmula: plot(y~x, data)
 ```
 
-##Modificación y creación de columnas.
+## Modificación y creación de columnas.
 ```R
 # reemplazo (al usar el mismo nombre) una variable numérica por un factor
 datos$trat
@@ -215,7 +215,7 @@ datos$pais <- factor(datos$pob, levels = c("pob2", "pob1"),
 head(datos)
 ```
 
-##Subdivisión de conjuntos de datos
+## Subdivisión de conjuntos de datos
 ```R
 # Subdivisión de un conjunto de datos
 # Símbolos lógicos: 
@@ -238,7 +238,7 @@ ldat
 ldat[["B"]] # indexacion especial
 ```
 
-##Funciones para extraer información de una columna o de un vector
+## Funciones para extraer información de una columna o de un vector
 ```R
 class(xx)
 length(seq1)
@@ -249,7 +249,7 @@ min(datos$largo.a)
 which.min(datos$largo.a)
 ```
 
-##Funciones estadísticas básicas
+## Funciones estadísticas básicas
 Se detallan abajo algunas como la media, varianza, desvío estándar, etc. En general si cualquiera de ellas se aplica sobre datos que contienen NA el resultado será NA también, por lo cual hay indicarle a la función que los elimine. Una alternativa es eliminar previamente todas las filas con datos faltantes usando la función na.omit.
 ```R
 # media
