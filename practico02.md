@@ -1,13 +1,9 @@
----
-title: "Práctico 2. Modelos Lineales Simples"
-output: 
-  html_document:
-    highlight: tango
----
+# Práctico 2. Modelos Lineales Simples
 
-##Caso 1. 
+## Caso 1. 
 Se examina la relación entre la altura y la capacidad pulmonar. Los datos se encuentran en el archivo fumadores.txt.   
-```{r, eval=FALSE} 
+
+```R
 # complete la ruta al directorio en ...
 fum <- read.table(".../fumadores.txt", header = TRUE)
 fum 
@@ -52,9 +48,10 @@ cv.err1$delta
 cv.err2$delta
 ```
 
-##Caso 2. 
-Muertes de mosquitos en respuesta a distintos insecticidas. Datos de ejemplo cargado en R: InsectSprays.   
-```{r, eval=FALSE}
+## Caso 2. 
+Muertes de mosquitos en respuesta a distintos insecticidas. Datos de ejemplo cargado en R: InsectSprays.
+
+```R
 data(InsectSprays)
 head(InsectSprays)
 
@@ -83,7 +80,7 @@ tuk<-TukeyHSD (fit.spray2)
 tuk
 ```
 
-##Ejercicios
+## Ejercicios
 
 1. Se intenta probar si el éxito reproductivo (medido como polinarios exportados) de la orquídea *Cyclopogon elatus* aumenta en flores con nectarios más profundos. El archivo cyclop.txt contiene las variables de interés nectario y pol.exp. Realizar gráficos exploratorios, ajustar un modelo de regresión lineal, extraer la tabla de parámetros y la tabla ANOVA y realizar gráficos de diagnóstico. ¿Qué opina de transformar los datos para satisfacer los requisitos del modelo lineal?    
      
