@@ -1,13 +1,11 @@
----
-title: 'Práctico 10: Bootstrap.'
-output: 
-  html_document:
-    highlight: tango
----
+Práctico 10: Bootstrap
 
-##Caso1
+
+## Caso1
+
 Se aplicará un bootstrap para establecer los intervalos de confianza de los coeficientes de regresión de un modelo lineal entre el éxito reproductivo de Turnera ulmifolia L. (medido como número de semillas) y características de sus flores (número de flores, producción de néctar y tamaño medio de la corola). 
-```{r, eval=FALSE}
+
+```R
 # complete la ruta al directorio en ...
 ulm <- read.table(".../ulmifolia.txt", header = TRUE)
 
@@ -101,7 +99,6 @@ jack.after.boot(boot.reg, index = 2)
 # ídem sobre la pendiente de "néctar"
 jack.after.boot(boot.reg, index = 3) 
 
-
 # ídem sobre la pendiente de "tamaño"
 jack.after.boot(boot.reg, index = 4) 
 
@@ -117,7 +114,7 @@ plot(boot.reg, index = 3, jack = T)
 plot(boot.reg, index = 4, jack = T)
 ```
 
-##Ejercicios
+## Ejercicios
 
 1. El número de ramas y el número de semillas en ulmifolia.txt no son variables de distribución normal. Obtenga intervalos de confianza del 95% utilizando bootstraps para el índice de correlación (r de Pearson) entre estas 2 variables. Comparar los resultados con el intervalo de confianza obtenido de aplicar la función cor.test, que asume normalidad de las variables.
 

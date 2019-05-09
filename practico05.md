@@ -1,17 +1,13 @@
----
-title: "Práctico 5. Manejo de gráficos y representación gráfica de modelos lineales."
-output: 
-  html_document:
-    highlight: tango
----
+# Práctico 5. Manejo de gráficos y representación gráfica de modelos lineales.
 
-##Comandos gráficos básicos
+## Comandos gráficos básicos
+
 * Comandos gráficos de alto nivel: abren una ventana gráfica y crean un gráfico nuevo completo. Modificando sus opciones es posible cambiar colores, tamaños, tipo de fuente y otras características. 
 * Comandos gráficos de bajo nivel: agregan más información a un gráfico ya existente, como puntos extra, líneas, funciones y leyendas. 
 * Comandos gráficos interactivos: permiten agregar o extraer información de un gráfico existente, usando el mouse. 
 
-##Uso de la función plot.
-```{r, eval=FALSE}
+## Uso de la función plot.
+```R
 # complete la ruta al directorio en ...
 datos <- read.table(".../cyclop.txt", header = TRUE)
 
@@ -48,11 +44,12 @@ summary(fit)
 abline(fit,	lty = 3, lwd = 2)
 ```
 
-##Devices
-Colocando ?Devices obtenemos la lista de formatos gráficos disponibles en R. No todos los formatos son accesibles en todos los sistemas.  
+## Devices
+
+Colocando `?Devices` obtenemos la lista de formatos gráficos disponibles en R. No todos los formatos son accesibles en todos los sistemas.  
 Los gráficos pueden guardarse (en Windows) con el botón derecho del mouse sobre el gráfico o utilizando Archivo - guardar como (la ventana gráfica debe estar en primer plano). Lo mismo puede hacerse utilizando comandos (veremos los principales) con la ventaja de un control más fino sobre la forma final del gráfico.  
 
-```{r, eval=FALSE}
+```R
 ?Devices
 
 # revisar donde se guardaran los gráficos
@@ -91,7 +88,8 @@ dev.off()                             # cerrar el gráfico
 ```
 
 ## Otros gráficos sencillos con variables continuas.
-```{r, eval=FALSE}
+
+```R
 # histogramas
 hist(datos$nectario, col = "orange1", main= "histograma",
      xlab = "nectario", ylab = "frecuencia")
@@ -100,8 +98,9 @@ hist(datos$nectario, col = "orange1", main= "histograma",
 qqnorm(datos$nectario)
 ```
 
-##División de la ventana gráfica.
-```{r, eval=FALSE}
+## División de la ventana gráfica
+
+```R
 # Básica con la función layout
 layout(matrix(1:4, 2, 2))
 hist(datos$nectario, col= "#CAFF70")
@@ -142,8 +141,9 @@ par(mfcol=c(1,1)) # deshacer lo anterior
 ?par
 ```
 
-##Gráficos de cajas.
-```{r, eval=FALSE}
+## Gráficos de cajas
+
+```R
 # complete la ruta al directorio en ...
 peces <- read.table(".../peces.txt", header = TRUE)
 peces$Species <- as.factor(peces$Species)
@@ -153,8 +153,9 @@ plot(peces$Species, peces$Weight)
 boxplot(Weight ~ Species, data = peces, col = "light blue")
 ```
 
-##Interacciones entre variables categóricas.
-```{r, eval=FALSE}
+## Interacciones entre variables categóricas
+
+```R
 # complete la ruta al directorio en ...
 bival <- read.table(".../bivalvos.txt", header = TRUE)
 
@@ -181,8 +182,9 @@ lineplot.CI(x.factor = densidad, response = huevos, group = estacion,
             trace.label = "estación")
 ```
 
-##Gráficos a partir de predichos.
-```{r, eval=FALSE}
+## Gráficos a partir de predichos
+
+```R
 # complete la ruta al directorio en ...
 datos <- read.table(".../cyclop.txt", header = TRUE)
 
@@ -210,9 +212,11 @@ plot(datos$flores, datos$pol.exp)
 points(FLO2, Y3, type = "l")
 ```
 
-##Interacciones de variables continuas: superficies.
+## Interacciones de variables continuas: superficies
+
 Se necesitan datos uniformemente espaciados para construir superficies. Existen alternativas no paramétricas que "suavizan" los datos para darnos una idea mejor de la forma "real" de una superficie, en este caso lo haremos "a mano" usando un modelo lineal.   
-```{r, eval=FALSE}
+
+```R
 # complete la ruta al directorio en ...
 datos <- read.table(".../cyclop.txt", header = TRUE)
 
@@ -269,7 +273,8 @@ pru<-trans3d(x = datos$flores, y = datos$nectario, z = datos$pol.exp, pmat = res
 points(pru, col = "royalblue4", pch = 20)
 ```
 
-##Ejercicios.
+## Ejercicios
+
 1. Usar los datos de  s_poly.txt para hacer gráficos bivariados, utilizar comandos gráficos de bajo nivel para darle colores y cambiar los símbolos y agregar una recta de regresión.
 Guarde el gráfico obtenido como pdf.   
 2. Represente gráficamente el resultado del ejercicio 2 del práctico 2:Determinar si existen diferencias en el peso de pecaríes según el mes de su captura: febrero, mayo, agosto y noviembre, con los datos del archivo pecaries.txt.   

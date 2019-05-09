@@ -1,14 +1,11 @@
----
-title: "Práctico 3. Modelos Lineales Múltiples I."
-output: 
-  html_document:
-    highlight: tango
----
+# Práctico 3. Modelos Lineales Múltiples I
 
-##Caso 1. 
+
+## Caso 1
+
 Se estudió el efecto del número de parejas sexuales sobre la longevidad de moscas de la fruta macho. Los tratamientos fueron: A = control (sin hembras), B = control (una hembra no receptiva al día), C = control (8 hembras no receptivas al día), D = una hembra virgen al día, E = 8 hembras vírgenes al día. Ya que la longevidad puede estar relacionada con el tamaño del insecto se tomó el diámetro del tórax como covariable. Los datos se encuentran en el archivo moscas.txt.  
 
-```{r, eval=FALSE}
+```R
 # complete la ruta al directorio en ...
 dat <- read.table(".../moscas.txt", header = TRUE)
 
@@ -42,7 +39,8 @@ plot(fit3)
 layout(1)
 ```
 
-##Ejercicios
+## Ejercicios
+
 1. Se busca un modelo que prediga la biomasa (peso.seco) de las almejas en función de su largo máximo (largo). Debido al ciclo de vida de las almejas, la relación biomasa-largo puede variar a lo largo del año, por lo que se ha tomado el mes de colecta (mes) como covariable. Los datos para el ejercicio se encuentran en el archivo almejas.txt.   
 
 2. Se intenta determinar el efecto de la estación (IP= invierno/primavera vs. VO= verano/otoño) y la densidad de adultos (A=8, B=15, C=30, D=45 en 225 cm2) sobre la producción de huevos de bivalvos. Los datos para el ejercicio se encuentran en el archivo bivalvos.txt.   

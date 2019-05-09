@@ -1,14 +1,11 @@
----
-title: "Práctico 4. Modelos Lineales Múltiples II."
-output: 
-  html_document:
-    highlight: tango
----
+# Práctico 4. Modelos Lineales Múltiples II
 
-##Caso 1.
+
+## Caso 1
+
 Se intenta realizar un modelo que prediga el contenido de azúcar en el néctar en flores de Salvia polystachia, a partir de 7 variables morfológicas medidas. Los datos se encuentran en el archivo  s_poly.txt.
 
-```{r, eval=FALSE}
+```R
 # complete la ruta al directorio en ...
 dat <- read.table(".../s_poly.txt", header = TRUE)
 
@@ -134,6 +131,7 @@ cv.out$lambda.min
 coef(cv.out, s = "lambda.min")
 ```
 
-##Ejercicios.
+## Ejercicios
+
 1. Los datos del archivo Loyn.txt corresponden a un estudio donde la densidad de aves (ABUND) se midió en 56 parches del sur de Victoria, Australia. El objetivo del estudio es determinar cuáles características del hábitat explican esa abundancia. Para ello se midió: tamaño del parche (AREA), distancia al parche más cercano (DIST), distancia al parche grande más cercano (LDIST), altura s.n.m. (ALT), años de aislamiento (YR.ISOL) y un índice de pastoreo (GRAZE). Explorar gráficamente los datos y examinar si las variables AREA, DIST Y LDIST requieren una transformación. Examinar la colinealidad de las variables y seleccionar un modelo adecuado.   
 2. Los datos del archivo fumadores.txt corresponden a un estudio donde se intenta explicar la capacidad pulmonar en función de dos variables continuas (edad y altura) y dos variables discretas (fumar = si/no; sexo = m/f). Observar cuidadosamente la colinealidad entre las variables (incluyendo las variables discretas).   
