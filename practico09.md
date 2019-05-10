@@ -94,20 +94,20 @@ P
    + Realizar diagnósticos y discutir si se cumplen los supuestos de un modelo lineal.   
    + Aplicar un modelo lineal randomizado.   
 
-2. El test de Mantel es utilizado para evaluar la asociación entre dos matrices de distancia (por ejemplo distancia genética y distancia geográfica) calculando la asociación entre dos matrices y comparando esta medida observada con la esperada por azar. La asociación entre matrices se calcula utilizando la correlación pareada entre los elementos de las matrices. Dado que las matrices X e Y son simétricas se utiliza solamente la mitad de ellas (arriba o abajo de la diagonal), esta mitad puede obtenerse por indexación.  
+2. El test de Mantel es utilizado para evaluar la asociación entre dos matrices de distancia (por ejemplo distancia genética y distancia geográfica) calculando la asociación entre dos matrices y comparando esta medida observada con la esperada por azar. La asociación entre matrices se calcula utilizando la correlación pareada entre los elementos de las matrices. Dado que las matrices X e Y son simétricas se utiliza solamente la mitad de ellas (arriba o abajo de la diagonal), esta mitad puede obtenerse por indexación. Obtener la asociación observada robs entre las dos matrices de distancia de los archivos yanomamaGEN y yanomamaGEO, correspondientes a las matrices de distancia geográfica y genética entre 19 aldeas Yanomama en Brasil. Realizar una randomización para obtener pseudo-valores de **r** y obtener su distribución. Probar si **r_obs** es significativa.   
 
 ```R
 # la mitad superior de la matriz X es 
 X[col(X) > row(X)]
 ```
 
-Obtener la asociación observada robs entre las dos matrices de distancia de los archivos yanomamaGEN y yanomamaGEO, correspondientes a las matrices de distancia geográfica y genética entre 19 aldeas Yanomama en Brasil. Realizar una randomización para obtener pseudo-valores de $r$ y obtener su distribución. Probar si $r_{obs}$ es significativa.   
-Nota 1. Existen funciones para realizar el test de Mantel en el paquete *vegan*, puede confirmar su resultado consultándolas).   
-Nota 2: evite usar el test de Mantel en la vida real, hay alternativas más adecuadas, por ejemplo protest en el mismo paquete *vegan*.  
-
 3. Hall et al. (Evolution (2008) 62-9: 2305–2315) proponen un test mediante permutaciones para conocer si existen diferencias significativas entre la oportunidad para la selección (I) masculina y femenina que actúan en una población.
 Hacer este test utilizando los datos de cyclopogon sabiendo que:  
-   + La oportunidad de la selección (I) se define como la varianza del éxito reproductivo.  
+   + La oportunidad de la selección (I) se define como la varianza del éxito reproductivo.
    + Las medidas de éxito femenino y masculino son frutos y pol.exp.  
    
-Para realizar este análisis la base de datos debe ser reordenada para agregar una variable de clasificación en masculino y femenino. Luego calcular la diferencia observada entre $I_{masc}$ e $I_{fem}$. Realizar una randomización para obtener 1000 pseudo-valores de esta diferencia y probar la significancia de la diferencia observada respecto a la distribución obtenida.  
+### Tips
+
+>Existen funciones para realizar el test de Mantel en el paquete *vegan*, puede confirmar su resultado consultándolas). Hay alternativas a este test más recomendables, por ejemplo *protest* en el mismo paquete *vegan*.  
+>Para realizar el ejercicio 3 la base de datos debe ser reordenada para agregar una variable de clasificación en masculino y femenino. 
+
