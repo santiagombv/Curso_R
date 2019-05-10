@@ -1,7 +1,7 @@
 ![header_R](/images/cactus.png)
 
 ### Docentes: Santiago Benitez-Vieyra y Federico Sazatornil
-*Intituto Multidisciplinario de Biología Vegetal (Universidad Nacional de Córdoba - CONICET)*
+#### *Intituto Multidisciplinario de Biología Vegetal (Universidad Nacional de Córdoba - CONICET)*
 
 ### 13 al 17 de mayo de 2019. Aula del Doctorado en Ciencias Biológicas (Universidad Nacional de Córdoba), Av. Vélez Sársfield esq. Duarte Quiros, Ciudad de Córdoba. 
 
@@ -13,5 +13,4 @@
 
 ### Descarga de todo el material práctico [aquí](https://github.com/santiagombv/cursoR/archive/master.zip)   
 
-### Link al [repo del curso](https://github.com/santiagombv/cursoR/)   
 
