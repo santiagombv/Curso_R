@@ -47,7 +47,7 @@ abline(fit,	lty = 3, lwd = 2)
 ## Devices
 
 Colocando `?Devices` obtenemos la lista de formatos gráficos disponibles en R. No todos los formatos son accesibles en todos los sistemas.  
-Los gráficos pueden guardarse (en Windows) con el botón derecho del mouse sobre el gráfico o utilizando Archivo - guardar como (la ventana gráfica debe estar en primer plano). Lo mismo puede hacerse utilizando comandos (veremos los principales) con la ventaja de un control más fino sobre la forma final del gráfico.  
+Los gráficos pueden guardarse utilizando Export en RStudio. Lo mismo puede hacerse utilizando comandos (veremos los principales) con la ventaja de un control más fino sobre la forma final del gráfico.  
 
 ```R
 ?Devices
@@ -87,7 +87,7 @@ plot(pol.exp ~ nectario, data=datos)  # comandos gráficos
 dev.off()                             # cerrar el gráfico
 ```
 
-## Otros gráficos sencillos con variables continuas.
+## Otros gráficos sencillos con variables continuas
 
 ```R
 # histogramas
@@ -260,8 +260,8 @@ persp(x = FLO, y = NEC, z = Z2)
 persp(x = FLO, y = NEC, z = Z2, 
       border = "slateblue4",       # border: color de la rejilla
       col = "aquamarine2",         # col: color de la superficie
-      xlab = "nectario",           # xlab, ylab, zlab: etiquetas ejes
-      ylab = "número de flores", 
+      xlab = "número de flores",   # xlab, ylab, zlab: etiquetas ejes
+      ylab = "nectario", 
       zlab = "polinarios",
       theta = -45,                 # theta: ángulo de giro horizontal
       phi = 20,                    # phi: ángulo de rotación vertical
@@ -277,4 +277,5 @@ points(pru, col = "royalblue4", pch = 20)
 
 1. Usar los datos de  s_poly.txt para hacer gráficos bivariados, utilizar comandos gráficos de bajo nivel para darle colores y cambiar los símbolos y agregar una recta de regresión.
 Guarde el gráfico obtenido como pdf.   
+
 2. Represente gráficamente el resultado del ejercicio 2 del práctico 2:Determinar si existen diferencias en el peso de pecaríes según el mes de su captura: febrero, mayo, agosto y noviembre, con los datos del archivo pecaries.txt.   

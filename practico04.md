@@ -16,9 +16,6 @@ plot(dat$caliz.sup); plot(dat$caliz.med); plot(dat$caliz.inf)
 plot(dat$labio.sup); plot(dat$labio.inf)
 layout(1)
 
-which.max(dat$azucar)
-dat <- dat[-101, ]
-
 # exploración bivariada de los datos
 pairs(dat)
 
@@ -119,12 +116,7 @@ plot(lasso.mod)
 coef(lasso.mod, s = 0.1) # ejemplo
 
 # Cross validation.
-grid <- 10^seq(10, -10, length = 100)
-cv.out <- cv.glmnet(x, y, alpha = 1, nfolds = 10, lambda = grid)
-plot(cv.out)
-
-grid <- 10^seq(0.5, -4, length = 100)
-cv.out <- cv.glmnet(x, y, alpha = 1, nfolds = 10, lambda = grid)
+cv.out <- cv.glmnet(x, y, alpha = 1, nfolds = 10)
 plot(cv.out)
 
 cv.out$lambda.min
