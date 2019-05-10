@@ -39,7 +39,7 @@ densityplot(~ ca.pulm | fuma, data = fum)
 
 ## Gráficos del paquete *ggplot2*
 
-Este paquete ofrece gráficos elegantes e intuitivos. Sin embargo, su escritura posee una gramática propia (una especie de "dialecto" dentro de R), por lo que requiere cierto tiempo hasta lograr su aprendizaje. La ayuda básica para *ggplot2* pude hallarse en la página https://ggplot2.tidyverse.org/reference/  
+Este paquete ofrece gráficos elegantes e intuitivos. Sin embargo, su escritura posee una gramática propia (una especie de "dialecto" dentro de R), por lo que requiere cierto tiempo hasta lograr su aprendizaje. La ayuda básica para *ggplot2* pude hallarse en la página https://ggplot2.tidyverse.org/reference  
 Un gráfico de *ggplot2* debe contar de al menos estos tres elementos:  
 
 * ggplot: función principal donde se especifica el set de datos y se crea el gráfico.   
