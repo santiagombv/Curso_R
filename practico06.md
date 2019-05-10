@@ -39,7 +39,7 @@ densityplot(~ ca.pulm | fuma, data = fum)
 
 ## Gráficos del paquete *ggplot2*
 
-Este paquete ofrece gráficos elegantes e intuitivos. Sin embargo, su escritura posee una gramática propia (una especie de "dialecto" dentro de R), por lo que requiere cierto tiempo hasta lograr su aprendizaje. La ayuda básica para *ggplot2* pude hallarse en la página http://ggplot2.tidyverse.org/reference/  
+Este paquete ofrece gráficos elegantes e intuitivos. Sin embargo, su escritura posee una gramática propia (una especie de "dialecto" dentro de R), por lo que requiere cierto tiempo hasta lograr su aprendizaje. La ayuda básica para *ggplot2* pude hallarse en la página https://ggplot2.tidyverse.org/reference/  
 Un gráfico de *ggplot2* debe contar de al menos estos tres elementos:  
 
 * ggplot: función principal donde se especifica el set de datos y se crea el gráfico.   
@@ -114,5 +114,7 @@ g2
 ## Ejercicios
 
 1. Utilizar los datos de turnera.txt para  hacer una regresión con dummy para el polen.tot en función del morfo y del área del pétalo. Representar los resultados utilizando lattice (sin líneas de regresión).  
+
 2. Utilizando los mismos datos realice gráficos de densidad para la altura del estambre (alt.estambre) según el morfo, utilizando lattice y ggplot2.  
+
 3. Utilizar los datos de Bahamas2.txt para construir una superficie en la cual el logaritmo de la densidad del pez loro (Parrot) se encuentre en función de la riqueza de especies de coral (CoralRichness) y de la cobertura de coral (CoralTotal).  
