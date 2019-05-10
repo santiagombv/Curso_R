@@ -149,13 +149,11 @@ med
 
 ## Ejercicios
 
-1. Construir una función que calcule el error estándar (SE) de la media y calcularlo para todas las variables en el archivo s_poly.txt (guardándolos en un solo vector).   
-
-$$S.E. = \frac{s} {\sqrt{n}}$$   
+* Construir una función que calcule el error estándar (SE) de la media y calcularlo para todas las variables en el archivo s_poly.txt (guardándolos en un solo vector).   
 
 ![equation2](http://www.sciweavers.org/tex2img.php?eq=S.E.%20%3D%20%5Cfrac%7Bs%7D%20%7B%5Csqrt%7Bn%7D%7D&bc=Sepia&fc=White&im=png&fs=12&ff=arev&edit=0" align="center" border="0" alt="S.E. = \frac{s} {\sqrt{n}})
 
-2. Utilizando la siguiente tabla de presencia/ausencia de especies en dos sitios.
+* Utilizando la siguiente tabla de presencia/ausencia de especies en dos sitios.
 
 Especie | A1  | A2  | A3  | A4  | A5  | A6  | A7  | A8  | A9  | A10 | A11 | A12 | A13 | A14 | A15 |
 ------- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -169,4 +167,4 @@ $$Q_{s} = \frac{2C} {A + B}$$
 
 Donde A y B es el número de especies de los sitios 1 y 2, respectivamente, y C es el número de especies compartidas por los sitios 1 y 2. Probar la eficacia de la función con otro set de datos.
 
-3. Simule una población de 1000 observaciones donde dos variables (X e Y) se encuentren relacionadas de forma que $Y = 0,1 + 2,5 X + 0,3 X^2 + \epsilon$ donde $\epsilon$ es un error de distribución normal y varianza = 0.7. Luego genere un gráfico, divida la población al azar en dos grupos (*training* y *test*), ajuste un modelo a los datos de *training* y use el modelo para predecir los valores de Y en los datos de *test*. Calcule la suma de cuadrados de los residuos de la predicción.
+* Simule una población de 1000 observaciones donde dos variables (X e Y) se encuentren relacionadas de forma que $Y = 0,1 + 2,5 X + 0,3 X^2 + \epsilon$ donde $\epsilon$ es un error de distribución normal y varianza = 0.7. Luego genere un gráfico, divida la población al azar en dos grupos (*training* y *test*), ajuste un modelo a los datos de *training* y use el modelo para predecir los valores de Y en los datos de *test*. Calcule la suma de cuadrados de los residuos de la predicción.
