@@ -13,12 +13,10 @@ Se realiza mediante la función *function*. Esta función requiere de dos grupos
 ### Caso 1
 El índice de diversidad de Shannon para un sitio se define por la fórmula   
 
-$$H' = - \sum p_{i} ln(p_{i})$$
+![equation1](http://www.sciweavers.org/tex2img.php?eq=H%27%20%3D%20-%5Csum%20p_%7Bi%7D%20ln%28p_%7Bi%7D%29&bc=Sepia&fc=White&im=png&fs=12&ff=arev&edit=0" align="center" border="0" alt="H' = -\sum p_{i} ln(p_{i}))
 
-![equation1](http://www.sciweavers.org/tex2img.php?eq=H%27%20%3D%20-%20%5Csum%20p_%7Bi%7D%20ln%28p_%7Bi%7D%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0" align="center" border="0" alt="H' = - \sum p_{i} ln(p_{i}))
-
-Donde S es el número de especies, $n_{i}$ es el número de individuos de la especie $i$, $N$ es el número total de individuos en el sitio y $p_{i}$ es, por tanto, la abundancia relativa de cada especie.
-Primero mostraremos el desarrollo para calcular $H'$ en un conjunto de datos consistentes en un vector donde cada valor corresponde al número de individuos de una especie diferente. Luego, construiremos una función para que la fórmula utilice cualquier set de datos.  
+Donde p_i es la abundancia relativa de cada especie.
+Primero mostraremos el desarrollo para calcular *H'* en un conjunto de datos consistentes en un vector donde cada valor corresponde al número de individuos de una especie diferente. Luego, construiremos una función para que la fórmula utilice cualquier set de datos.  
 
 ```R
 DAT <- c(13, 2, 4, 0, 36, 3, 2, 7, 1, 11)  # datos originales (inventados)
@@ -100,7 +98,7 @@ vec					       # vector luego de aplicar el loop
 plot(density(vec))		               #teorema central del límite
 ```
 
-*if* agrega una condición: si (condición) entonces hacer X, en caso contrario hacer Y.   
+**if** agrega una condición: si (condición) entonces hacer X, en caso contrario hacer Y.   
 ```R
 # construir una distribución normal truncada
 X1 <- rnorm(1000, mean= 3, sd=5)
@@ -151,10 +149,11 @@ med
 
 ## Ejercicios
 
-1. Construir una función que calcule el error estándar de la media y calcular el CV de todas las variables en el archivo s_poly.txt (guardándolos en un solo vector).   
+1. Construir una función que calcule el error estándar (SE) de la media y calcularlo para todas las variables en el archivo s_poly.txt (guardándolos en un solo vector).   
 
 $$S.E. = \frac{s} {\sqrt{n}}$$   
 
+![equation2](http://www.sciweavers.org/tex2img.php?eq=S.E.%20%3D%20%5Cfrac%7Bs%7D%20%7B%5Csqrt%7Bn%7D%7D&bc=Sepia&fc=White&im=png&fs=12&ff=arev&edit=0" align="center" border="0" alt="S.E. = \frac{s} {\sqrt{n}})
 
 2. Utilizando la siguiente tabla de presencia/ausencia de especies en dos sitios.
 
