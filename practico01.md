@@ -9,9 +9,9 @@ R es un lenguaje orientado a objetos: cada comando crea un objeto que debe ser "
 
 |  objeto      | descripción       |
 |:-------------|:------------------|
-| **data.frame**           | Objeto que contiene datos. Habitualmente se crea al importar datos externos, aunque pueden ser creados dentro del mismo R. Consiste en una serie de variables (*vectors*) de igual longitud y que pueden ser del mismo tipo o no. |
-| **vectors** | Colección de datos del mismo tipo (números, letras, etc.) que puede ser creado dentro de R o importado como una columna de un *data.frame*. Existen muchos tipos de vectores, entre ellos: *numeric* consiste de números reales; *integer* consiste de números enteros; *character* contiene letras, nombres, etc. (notar que cada elemento se encuentra entre comillas, por ej. "A1"); *factor* sirve para representar variables categóricas, porta información sobre los niveles del factor (*levels*) y sobre si estos niveles siguen un orden o no.   |
-| **matrix**           | Matriz formada por la unión de vectores de un mismo tipo y largo, por un solo vector que es partido en columnas y filas o (más habitualmente) producto de ciertas funciones, por ejemplo *cor*, que construye matrices de correlación.      |
+| **data.frame**           | Objeto que contiene datos. Habitualmente se crea al importar datos externos, aunque pueden ser creados dentro del mismo R. Consiste en una serie de variables (**vectors**) de igual longitud y que pueden ser del mismo tipo o no. |
+| **vectors** | Colección de datos del mismo tipo (números, letras, etc.) que puede ser creado dentro de R o importado como una columna de un **data.frame**. Existen muchos tipos de vectores, entre ellos: **numeric** consiste de números reales; **integer** consiste de números enteros; **character** contiene letras, nombres, etc. (notar que cada elemento se encuentra entre comillas, por ej. "A1"); *factor* sirve para representar variables categóricas, porta información sobre los niveles del factor (**levels**) y sobre si estos niveles siguen un orden o no.   |
+| **matrix**           | Matriz formada por la unión de vectores de un mismo tipo y largo, por un solo vector que es partido en columnas y filas o (más habitualmente) producto de ciertas funciones, por ejemplo **cor**, que construye matrices de correlación.      |
 | **list**           | Objeto que compuesto de objetos de distinto tipo y largo. |
 
 
@@ -59,7 +59,7 @@ Las funciones de esta sección son las más sencillas de R. Como regla general l
 vec <- c(1, 4, 6, 3, 7)
 vec
 
-# vectores de repetición. rep(lo_que_queremos_repetir, cuántas veces)
+# vectores de repetición. rep(lo_que_queremos_repetir, cuantas veces)
 # esta función tiene dos argumentos, separados por una coma
 xx <- rep("A", 50) 
 xx
@@ -103,15 +103,13 @@ matriz2
 ## Preparación e ingreso de datos: las funciones *read.table* y *read.csv*.
 Los datos pueden prepararse con cualquier software para planillas de datos como Excel o LibreOffice Calc. 
 Se recomienda:  
-- Que los nombres de las columnas no tengan espacios ni comiencen con números.    
+- Que los nombres de las columnas no tengan espacios ni comiencen con números.  
 - Evitar los símbolos extraños como %, &, ^, ~, ñ, etc.  
 - Utilizar nombres cortos.   
 - Los datos faltantes no deben dejarse en blanco, sino señalarse con NA.    
 
-Una vez lista la planilla se recomienda guardarla en formato .txt o .csv (si bien R admite otros formatos). Pueden guardarse en cualquier carpeta del equipo. En el caso de que se escriba cada vez la ruta para encontrar ese archivo, es recomendable ubicar la carpeta cerca de la raíz del equipo (normalmente C:/ en Windows o /home en Ubuntu). En este manual se supondrá que los archivos de datos se han guardado en C:/RD. Puede evitarse escribir la ruta si al abrir R seleccionamos la carpeta que donde los archivos están guardados con la opción Archivo - cambiar dir o usando la función *setwd* (para examinar cual es la carpeta en uso, utilizar *getwd*). Esta opción es muy útil si vamos a abrir varios archivos de datos guardados en el mismo directorio. Finalmente, puede abrirse una ventana de búsqueda para seleccionar el archivo con la opción *file.choose()*.
+Una vez lista la planilla se recomienda guardarla en formato .txt o .csv (si bien R admite otros formatos). Pueden guardarse en cualquier carpeta del equipo. Si utilizamos R Studio y guardamos los sets de datos en la misma carpeta que la rutina, el programa determinará esa carpeta como el directorio de trabajo de forma automática, por lo que no es necesario escribir la ruta completa al archivo. También puede evitarse escribir la ruta si al abrir R seleccionamos la carpeta que donde los archivos están guardados con la opción Session - Set Working Directory, o usando la función *setwd* (para examinar cual es la carpeta en uso, utilizar *getwd*). Esta opción es muy útil si vamos a abrir varios archivos de datos guardados en el mismo directorio. Finalmente, puede abrirse una ventana de búsqueda para seleccionar el archivo con la opción *file.choose()*.
    
-
-
 ```R
 # la función read.table
 # opción 1 con ruta completa (notar orientación de las barras /)
@@ -288,23 +286,11 @@ MG<-aggregate(datos$largo.a, by=list(datos$grupo), FUN=mean, na.rm=TRUE)
 MG
 ```
 
-Otras funciones útiles y miscelánea    
+> En RStudio las dos ventanas principales contienen la rutina (con el archivo sobre el cual estamos trabajando) y la consola de R. **SIEMPRE** trabajar sobre el archivo, no sobre la consola.
 
-* Editar - Limpiar Consola (Ctrl+L): Borra la consola de R, pero no remueve los objetos de la memoria.   
+> El símbolo **>** en la consola indica que R está listo para recibir una orden. En caso de que aparezca **+** en su lugar, indica que no se ha completado una orden (la razón más común es no haber cerrado un paréntesis). Una manera de solucionarlo es colocarse en la consola y presionar Esc.
 
-* Detener el cálculo actual. STOP o presionar Esc.     
-
-* Misc - Listar Objetos: Muestra los objetos guardados en la memoria.  
-
-```R
-ls()
-```
-
-* Misc - Remover todos los objetos: Elimina todos los objetos guardados en la memoria.    
-
-```R
-rm(list = ls(all = TRUE))
-```
+> Para cálculos muy complejos, la consola puede quedar inutilizada por un tiempo. En ese caso veremos que el símbolo **>** no aparece. Puede detenerse un cálculo con **STOP**.
 
 > **QUÉ SIGUE:** Manipular bases de datos es un campo en desarrollo. El paquete *dplyr* de Hadley Wickham es altamente recomendable (https://cran.r-project.org/web/packages/dplyr/). Para una excelente introducción a *dplyr* consultar http://www.dataschool.io/dplyr-tutorial-part-2/ .   
    
