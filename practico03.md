@@ -1,6 +1,5 @@
 # Práctico 3. Modelos Lineales Múltiples I
 
-
 ## Caso 1
 
 Se estudió el efecto del número de parejas sexuales sobre la longevidad de moscas de la fruta macho. Los tratamientos fueron: A = control (sin hembras), B = control (una hembra no receptiva al día), C = control (8 hembras no receptivas al día), D = una hembra virgen al día, E = 8 hembras vírgenes al día. Ya que la longevidad puede estar relacionada con el tamaño del insecto se tomó el diámetro del tórax como covariable. Los datos se encuentran en el archivo moscas.txt.  

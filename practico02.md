@@ -1,6 +1,7 @@
 # Práctico 2. Modelos Lineales Simples
 
-## Caso 1. 
+## Caso 1
+
 Se examina la relación entre la altura y la capacidad pulmonar. Los datos se encuentran en el archivo fumadores.txt.   
 
 ```R
@@ -48,7 +49,8 @@ cv.err1$delta
 cv.err2$delta
 ```
 
-## Caso 2. 
+## Caso 2
+
 Muertes de mosquitos en respuesta a distintos insecticidas. Datos de ejemplo cargado en R: InsectSprays.
 
 ```R

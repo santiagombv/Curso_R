@@ -83,7 +83,7 @@ coef(BS.fit, 1)
 library(MASS) 
 stepAIC(fit2, direction ="both") #para usar AIC
 
-#para usar BIC cambio los grados de libertad de la penalización
+# para usar BIC cambio los grados de libertad de la penalización
 n<-nrow(dat)
 stepAIC(fit2, direction="both", k=log(n))#ajustar el modelo final
 
@@ -100,10 +100,10 @@ std.model <- standardize(global, standardize.y = FALSE)
 set <- dredge(std.model)
 set
 
-top.mod <-get.models(set, subset = delta<2)
+top.mod <- get.models(set, subset = delta<2)
 top.mod
 
-AVG<-model.avg(top.mod)
+AVG <- model.avg(top.mod)
 summary(AVG)
 
 # Selección de Modelos. Shrinkage
@@ -134,4 +134,5 @@ coef(cv.out, s = "lambda.min")
 ## Ejercicios
 
 1. Los datos del archivo Loyn.txt corresponden a un estudio donde la densidad de aves (ABUND) se midió en 56 parches del sur de Victoria, Australia. El objetivo del estudio es determinar cuáles características del hábitat explican esa abundancia. Para ello se midió: tamaño del parche (AREA), distancia al parche más cercano (DIST), distancia al parche grande más cercano (LDIST), altura s.n.m. (ALT), años de aislamiento (YR.ISOL) y un índice de pastoreo (GRAZE). Explorar gráficamente los datos y examinar si las variables AREA, DIST Y LDIST requieren una transformación. Examinar la colinealidad de las variables y seleccionar un modelo adecuado.   
+
 2. Los datos del archivo fumadores.txt corresponden a un estudio donde se intenta explicar la capacidad pulmonar en función de dos variables continuas (edad y altura) y dos variables discretas (fumar = si/no; sexo = m/f). Observar cuidadosamente la colinealidad entre las variables (incluyendo las variables discretas).   
