@@ -22,7 +22,7 @@ El objetivo de este curso es capacitar al alumno para realizar una rutina de an�
 ## Paquetes
 Los paquetes de R son colecciones de funciones para un fin determinado, asociadas a su ayuda y, ocasionalmente, bases de datos y demostraciones de uso (*vignettes*). Para mayo de 2019, se encontraban disponibles 14191 paquetes.
 
-> Para este curso, se requieren los siguientes paquetes que no son descargados de forma automática con la instalación de R, por lo que deberá instalarlos manualmente: *glmnet*, *ggplot2*, *lattice*, *rgl*, *sciplot*, *car*, *arm*, *MuMIn*, *devtools*, *leaps* y todas las dependencias necesarias.  
+> Para este curso, se requieren los siguientes paquetes que no son descargados de forma automática con la instalación de R, por lo que deberá instalarlos manualmente: *glmnet*, *ggplot2*, *lattice*, *leaps*, *rgl*, *sciplot*, *car*, *arm*, *MuMIn*, *devtools*, *leaps* y todas las dependencias necesarias.  
 
 ## Instalación de R y de sus paquetes en Windows
 
