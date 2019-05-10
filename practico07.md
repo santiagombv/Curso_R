@@ -1,8 +1,11 @@
-# Práctico 7. Construyendo Rutinas.
+# Práctico 7. Construyendo Rutinas
 
 
-El objetivo de este trabajo es practicar la escritura de una rutina, la cual debe incluir el ingreso de datos, la carga de paquetes (en caso de ser necesario), la modificación de variables (en caso de ser necesario), exploración gráfica de los datos, planteo de diferentes modelos, comprobación de supuestos y el modelo final elegido. Utilizaremos R Studio para construir la rutina, la cual guardaremos con la extensión .R.     
-Luego utilizaremos el mismo programa para construir un documento R Markdown, el cual combina la naturaleza de una rutina de R con la habilidad de generar un documento que presente los resultados del análisis (el manual de este curso está construido de esta forma). Para esto, en R Studio seleccione New file - R Markdown. En output format, elija HTML (para pdf es necesario instalar algunos programas extra en la computadora). Se abrirá un documento auto-explicado, solo es necesario reemplazar su contenido por el contenido deseado. Al finalizar, haga click en el ícono de "Knit HTML". La ayuda general de R Markdown puede encontrarse en http://rmarkdown.rstudio.com/.         
+El objetivo de este trabajo es practicar la escritura de una rutina, la cual debe incluir el ingreso de datos, la carga de paquetes (en caso de ser necesario), la modificación de variables (en caso de ser necesario), exploración gráfica de los datos, planteo de diferentes modelos, comprobación de supuestos y el modelo final elegido. Utilizaremos RStudio para construir la rutina, la cual guardaremos con la extensión .R.  
+
+Luego utilizaremos el mismo programa para construir un documento R Markdown, el cual combina la naturaleza de una rutina de R con la habilidad de generar un documento que presente los resultados del análisis (el manual de este curso está construido de esta forma). Para esto, en R Studio seleccione New file - R Markdown. En output format, elija HTML (para pdf es necesario instalar algunos programas extra en la computadora). Se abrirá un documento auto-explicado, solo es necesario reemplazar su contenido por el contenido deseado. Al finalizar, haga click en el ícono de "Knit HTML". La ayuda general de R Markdown puede encontrarse en [**aquí.**](http://rmarkdown.rstudio.com/)   
+
+[**Markdown**] es un lenguaje ligero, entendible en forma directa, y editable con cualquier editor de textos, que permite su traducción a otros lenguajes para dar documentos que se utilizarán como páginas web, pdf. Su integración con R permite realizar reportes dinámicos, presentaciones, páginas web, etc. Los materiales de este curso están escritos íntegramente en [RMarkdown](http://rmarkdown.rstudio.com/) y [Github Flavored Markdown](https://guides.github.com/features/mastering-markdown/). Markdown fue creado por John Gruber y el activista Aaron Swartz. 
 
 
 ### Ejercicio 1. Nereis.txt
